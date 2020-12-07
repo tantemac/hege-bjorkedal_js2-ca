@@ -1,0 +1,43 @@
+/* font-family: 'Rajdhani', sans-serif;
+font-family: 'Sansita Swashed', cursive; */
+
+* {
+	border-sizing: border-box;
+}
+
+body {
+	background-color: grey;
+	margin: 0;
+}
+
+header {
+	height: 80px;
+	background-color: lightgrey;
+	margin: 0;
+}
+
+.container {
+	max-width: 700px;
+	margin: 20px 40px;
+}
+
+h1 {
+	font-family: "Sansita Swashed", cursive;
+	font-weight: 600;
+	font-size: 30px;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 40px;
+	height: 40px;
+	background-color: lightgrey;
+}
+
+footer p {
+	font-family: "Sansita Swashed", cursive;
+	font-weight: 300;
+	font-size: 14px;
+}

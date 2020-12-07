@@ -1,2 +1,1 @@
-// sdiufheuwihflhf
-// heowihoefiwheioefw
+import baseUrl from "./settings/api.js";
