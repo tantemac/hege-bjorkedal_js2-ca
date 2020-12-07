@@ -1,12 +1,17 @@
-/* font-family: 'Rajdhani', sans-serif;
-font-family: 'Sansita Swashed', cursive; */
 /* 
+FONTS: 
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Sansita Swashed', cursive; 
+
 COLOURS:
 Dark green: #35403A
 Dark: #252626
 Green: #4C594F
 Light Green: #A4A69C
 Light: #BFBFB8
+
+ICONS: 
+<i class="fas fa-heart"></i>
 */
 
 * {
@@ -46,6 +51,30 @@ h1 {
 	max-width: 700px;
 	margin: 20px 40px;
 	flex: 1 0 auto;
+}
+
+.apiContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.articleContainer {
+	background-color: #252626;
+	width: 300px;
+	height: 200px;
+	padding: 30px;
+	margin: 20px;
+}
+
+h4 {
+	font-size: 25px;
+	margin: 0;
+	padding: 0;
+}
+
+.articleContainer p {
+	font-size: 18px;
 }
 
 footer {
