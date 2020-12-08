@@ -33,11 +33,15 @@ body {
 	flex-direction: column;
 }
 
-.header div {
+.header {
 	height: 60px;
 	background-color: #bfbfb8;
 	margin: 0;
+}
+.header div {
 	color: #252626;
+	font-size: 22px;
+	padding: 20px 40px;
 }
 
 h1 {
@@ -48,7 +52,7 @@ h1 {
 }
 
 .container {
-	max-width: 900px;
+	max-width: 1200px;
 	margin: 20px 40px;
 	flex: 1 0 auto;
 }
@@ -58,10 +62,10 @@ h1 {
 	flex-wrap: wrap;
 }
 
-.articleContainer {
+.article {
 	background-color: #252626;
 	width: 300px;
-	padding: 20px;
+	padding: 30px;
 	margin: 0px 20px 20px 0px;
 	border-radius: 5px;
 }
@@ -72,8 +76,22 @@ h4 {
 	padding: 0;
 }
 
-.articleContainer p {
-	font-size: 18px;
+.article p {
+	font-size: 20px;
+}
+
+.summarytitle {
+	margin: 18px 0px 0px 0px;
+	text-transform: uppercase;
+}
+
+.summary {
+	margin: 2px 0px 18px 0px;
+}
+
+.article i {
+	font-size: 35px;
+	padding: 10px;
 }
 
 footer {
