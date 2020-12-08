@@ -25,7 +25,7 @@ body {
 	padding: 0;
 	height: 100%;
 	font-family: "Rajdhani", sans-serif;
-	color: white;
+	color: #bfbfb8;
 }
 
 body {
@@ -33,11 +33,11 @@ body {
 	flex-direction: column;
 }
 
-header {
+.header div {
 	height: 60px;
 	background-color: #bfbfb8;
 	margin: 0;
-	box-shadow: 0 6px 3px -3px #35403a;
+	color: #252626;
 }
 
 h1 {
@@ -48,23 +48,22 @@ h1 {
 }
 
 .container {
-	max-width: 700px;
+	max-width: 900px;
 	margin: 20px 40px;
 	flex: 1 0 auto;
 }
 
 .apiContainer {
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 }
 
 .articleContainer {
 	background-color: #252626;
 	width: 300px;
-	height: 200px;
-	padding: 30px;
-	margin: 20px;
+	padding: 20px;
+	margin: 0px 20px 20px 0px;
+	border-radius: 5px;
 }
 
 h4 {
@@ -85,12 +84,11 @@ footer {
 	padding: 10px 40px;
 	height: 40px;
 	background-color: #bfbfb8;
-	box-shadow: 0px -3px 6px #35403a;
 }
 
 footer p {
 	font-family: "Sansita Swashed", cursive;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: 18px;
 	color: #252626;
 }
