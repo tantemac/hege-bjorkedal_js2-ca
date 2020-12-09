@@ -17,7 +17,7 @@ const articleUrl = baseUrl + "articles";
                                     <p>Author: ${article.author}</p>
                                     <p class="summarytitle">Summary:</p>
                                     <p class="summary">${article.summary}</p>
-                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-heart" data-id="${article.id}" data-title="${article.title}"></i>
                                     </div>`
         });
 
@@ -34,9 +34,44 @@ favButtons.forEach((button) => {
 });
 
 function handleClick(event) {
-    console.log(event);
-    event.target.classList.toggle("fas");
-    event.target.classList.toggle("far");
+    // console.log(event);
+    this.classList.toggle("fas");
+    this.classList.toggle("far");
+
+    const id = this.dataset.id;
+    const title = this.dataset.title;
+
+    // console.log("id", id);
+    // console.log("title", title);
+
+    const currentFavs = getExistingFavs();
+    // console.log(currentFavs);
+
+    const articles = {id: id, title: title};
+
+    currentFavs.push(articles);
+
+    saveFavourites();
 }
+
+function getExistingFavs() {
+
+    const favs = localStorage.getItem("favourites");
+
+    // console.log(favs);
+
+    if(!favs) {
+        return [];
+    } else {
+        return JSON.parse(favs);
+    }
+
+    function saveFavourites (favs) {
+        localStorage.setItems("favourites", JSON.stringify(favs));
+    }
+
+}
+
+
 
 })();
