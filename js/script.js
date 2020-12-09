@@ -39,4 +39,3 @@ function handleClick(event) {
 handleClick();
 
 })();
-
