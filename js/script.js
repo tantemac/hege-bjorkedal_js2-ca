@@ -1,5 +1,5 @@
 import { baseUrl } from "./settings/api.js";
-import { getExistingFavs } from "./utils/storage.js";
+import { getExistingFavs } from "./utils/getFavourites.js";
 
 const articleUrl = baseUrl + "articles";
 const articleContainer = document.querySelector(".apiContainer");
@@ -77,5 +77,5 @@ const favourites = getExistingFavs();
     function saveFavs(favs) {
         localStorage.setItem("favourites", JSON.stringify(favs));
     }
-    
+
 })();
