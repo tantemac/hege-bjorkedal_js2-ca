@@ -35,13 +35,13 @@ function createHTML(json) {
             if (doesObjectExist) {
                 cssClass = "fas";
             }
-            
+
         articleContainer.innerHTML += `<div class="article">
                                         <h4>${article.title}</h4>
                                         <p>Author: ${article.author}</p>
                                         <p class="summarytitle">Summary:</p>
                                         <p class="summary">${article.summary}</p>
-                                        <i class="${cssClass} fa-heart" data-id="${article.id}" data-title="${article.title}"></i>
+                                        <i class="${cssClass} fa-heart" data-id="${article.id}" data-title="${article.title}" data-author="${article.author}" data-summary="${article.summary}"></i>
                                         </div>`;
   });
 
@@ -62,6 +62,8 @@ function handleClick() {
 
     const id = this.dataset.id;
     const title = this.dataset.title;
+    const author = this.dataset.author;
+    const summary = this.dataset.summary;
 
     const currentFavs = getExistingFavs();
 
@@ -70,7 +72,7 @@ function handleClick() {
     });
 
     if (articleExist === undefined) {
-        const article = { id: id, title: title };
+        const article = { id: id, title: title, author: author, summary: summary};
         currentFavs.push(article);
         saveFavs(currentFavs);
     } else {

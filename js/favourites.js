@@ -1,7 +1,9 @@
 import { getExistingFavs } from "./utils/getFavourites.js";
+import clearButton from "./components/clearButton.js";
 
-function renderFavourites() {
+export function renderFavourites() {
     const favourites = getExistingFavs();
+    clearButton();
     
     const articleContainer = document.querySelector(".apiContainer");
     

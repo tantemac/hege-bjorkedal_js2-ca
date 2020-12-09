@@ -27,6 +27,7 @@ body {
 	height: 100%;
 	font-family: "Rajdhani", sans-serif;
 	color: #bfbfb8;
+	font-size: 18px;
 }
 
 body {
@@ -35,14 +36,36 @@ body {
 }
 
 .header {
-	height: 60px;
+	width: 100%;
 	background-color: #bfbfb8;
 	margin: 0;
 }
+
 .header div {
 	color: #252626;
-	font-size: 22px;
-	padding: 20px 40px;
+	font-size: 20px;
+	margin: 20px 0px;
+	text-align: center;
+}
+
+nav {
+	text-align: center;
+	margin: 30px 0px;
+}
+
+nav a {
+	color: #252626;
+	font-size: 16px;
+	padding: 5px 10px;
+	margin-right: 20px;
+	border: 2px solid #4c594f;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.active {
+	background-color: #35403a;
+	color: #bfbfb8;
 }
 
 h1 {
@@ -72,13 +95,13 @@ h1 {
 }
 
 h4 {
-	font-size: 25px;
+	font-size: 22px;
 	margin: 0;
 	padding: 0;
 }
 
 .article p {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .summarytitle {
@@ -99,19 +122,33 @@ h4 {
 	color: #7b0000;
 }
 
+button {
+	padding: 10px;
+	background-color: #bfbfb8;
+	color: #252626;
+	border: 1px solid #252626;
+	border-radius: 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 10px 0px 30px 0px;
+}
+
+button:focus {
+	outline: none;
+}
+
 footer {
 	display: flex;
 	flex-shrink: 0;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 40px;
-	height: 40px;
 	background-color: #bfbfb8;
 }
 
 footer p {
 	font-family: "Sansita Swashed", cursive;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 16px;
 	color: #252626;
 }
