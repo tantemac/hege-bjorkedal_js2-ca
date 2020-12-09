@@ -1,23 +1,40 @@
 import { baseUrl } from "./settings/api.js";
+import { getExistingFavs } from "./utils/storage.js";
 
 const articleUrl = baseUrl + "articles";
+const articleContainer = document.querySelector(".apiContainer");
+
+const favourites = getExistingFavs();
 
 (async function () {
-    const container = document.querySelector(".apiContainer");
-
     try {
         const response = await fetch(articleUrl);
         const json = await response.json();
 
-        container.innerHTML ="";
+        articleContainer.innerHTML ="";
 
         json.forEach(function (article) {
-            container.innerHTML += `<div class="article">
+
+            let cssClass = "far";
+
+            const doesObjectExist = favourites.find(function (fav) {
+                console.log(fav);
+
+                return parseInt(fav.id) === article.id;
+            });
+
+            console.log (doesObjectExist);
+
+            if (doesObjectExist) {
+                cssClass = "fas";
+            }
+
+            articleContainer.innerHTML += `<div class="article">
                                     <h4>${article.title}</h4>
                                     <p>Author: ${article.author}</p>
                                     <p class="summarytitle">Summary:</p>
                                     <p class="summary">${article.summary}</p>
-                                    <i class="far fa-heart" data-id="${article.id}" data-title="${article.title}"></i>
+                                    <i class="${cssClass} fa-heart" data-id="${article.id}" data-title="${article.title}"></i>
                                     </div>`
         });
 
@@ -27,51 +44,38 @@ const articleUrl = baseUrl + "articles";
 
     const favButtons = document.querySelectorAll(".article i");
 
-console.log(favButtons);
+    console.log(favButtons);
 
-favButtons.forEach((button) => {
-    button.addEventListener("click", handleClick);
-});
+    favButtons.forEach((button) => {
+        button.addEventListener("click", handleClick);
+    });
 
-function handleClick(event) {
-    // console.log(event);
-    this.classList.toggle("fas");
-    this.classList.toggle("far");
+    function handleClick() {
 
-    const id = this.dataset.id;
-    const title = this.dataset.title;
+        this.classList.toggle("fas");
+        this.classList.toggle("far");
 
-    // console.log("id", id);
-    // console.log("title", title);
+        const id = this.dataset.id;
+        const title = this.dataset.title;
 
-    const currentFavs = getExistingFavs();
-    // console.log(currentFavs);
+        const currentFavs = getExistingFavs();
 
-    const articles = {id: id, title: title};
+        const articleExist = currentFavs.find(function (fav) {
+            return fav.id === id;
+        });
 
-    currentFavs.push(articles);
-
-    saveFavourites();
-}
-
-function getExistingFavs() {
-
-    const favs = localStorage.getItem("favourites");
-
-    // console.log(favs);
-
-    if(!favs) {
-        return [];
-    } else {
-        return JSON.parse(favs);
+        if (articleExist === undefined) {
+            const article = { id: id, title: title };
+            currentFavs.push(article);
+            saveFavs(currentFavs);
+        } else {
+            const newFavs = currentFavs.filter((fav) => fav.id !== id);
+            saveFavs(newFavs);
+        }
     }
 
-    function saveFavourites (favs) {
-        localStorage.setItems("favourites", JSON.stringify(favs));
+    function saveFavs(favs) {
+        localStorage.setItem("favourites", JSON.stringify(favs));
     }
-
-}
-
-
-
+    
 })();
