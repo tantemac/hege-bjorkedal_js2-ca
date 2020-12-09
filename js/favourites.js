@@ -9,7 +9,12 @@ if (favourites.length === 0) {
 }
 
 favourites.forEach(favourite) => {
-    articleContainer.innherHTML += `
+    articleContainer.innherHTML += `<div class="article">
+                                    <h4>${article.title}</h4>
+                                    <p>Author: ${article.author}</p>
+                                    <p class="summarytitle">Summary:</p>
+                                    <p class="summary">${article.summary}</p>
+                                    <i class="${cssClass} fa-heart" data-id="${article.id}" data-title="${article.title}"></i>
+                                    </div>`
                                     
-                                    `
 }
