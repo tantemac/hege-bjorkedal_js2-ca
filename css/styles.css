@@ -75,6 +75,19 @@ h1 {
 	text-shadow: 2px 2px 5px #252626;
 }
 
+input {
+	background-color: #ffffff;
+	margin-bottom: 30px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #252626;
+	font-size: 16px;
+}
+
+input:focus {
+	outline: none;
+}
+
 .container {
 	max-width: 1200px;
 	margin: 20px 40px;
@@ -123,8 +136,8 @@ h4 {
 }
 
 button {
-	padding: 10px;
-	background-color: #bfbfb8;
+	padding: 7px;
+	background-color: #ffffff;
 	color: #252626;
 	border: 1px solid #252626;
 	border-radius: 5px;
@@ -135,6 +148,11 @@ button {
 
 button:focus {
 	outline: none;
+}
+
+.error {
+	padding: 20px;
+	border: 2px solid red;
 }
 
 footer {

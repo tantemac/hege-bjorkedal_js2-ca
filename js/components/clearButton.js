@@ -4,7 +4,6 @@ export default function clearButton() {
     const clearBtn = document.querySelector("#clear");
 
     clearBtn.addEventListener("click", clearList);
-    console.log("hello");
 
     function clearList() {
 
