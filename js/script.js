@@ -20,6 +20,7 @@ const articleUrl = baseUrl + "articles";
                                     <i class="far fa-heart"></i>
                                     </div>`
         });
+
     } catch (error) {
         console.log(error);
     }
@@ -34,8 +35,8 @@ favButtons.forEach((button) => {
 
 function handleClick(event) {
     console.log(event);
+    event.target.classList.toggle("fas");
+    event.target.classList.toggle("far");
 }
-
-handleClick();
 
 })();
