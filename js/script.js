@@ -23,9 +23,8 @@ const articleUrl = baseUrl + "articles";
     } catch (error) {
         console.log(error);
     }
-})();
 
-const favButtons = document.querySelectorAll(".article i");
+    const favButtons = document.querySelectorAll(".article i");
 
 console.log(favButtons);
 
@@ -39,4 +38,5 @@ function handleClick(event) {
 
 handleClick();
 
-//saving to master
+})();
+
