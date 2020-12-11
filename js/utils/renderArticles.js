@@ -26,6 +26,7 @@ export function renderArticles(json) {
 
         articleContainer.innerHTML += `<div class="article">
                                         <h4>${article.title}</h4>
+                                        <a href="edit.html?id=${article.id}"><i class="far fa-edit"></i></a>
                                         <p>Author: ${article.author}</p>
                                         <p class="summarytitle">Summary:</p>
                                         <p class="summary">${article.summary}</p>

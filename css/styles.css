@@ -111,6 +111,7 @@ h4 {
 	font-size: 22px;
 	margin: 0;
 	padding: 0;
+	display: inline-block;
 }
 
 .article p {
@@ -191,15 +192,18 @@ label {
 }
 
 .message.error {
+	background-color: red;
 	border: 2px solid red;
 }
 
 .message.warning {
+	background-color: orange;
 	border: 2px solid orange;
 }
 
 .message.success {
-	border: 2px solid #ffffff;
+	background-color: green;
+	border: 2px solid green;
 }
 
 /* ADD PAGE */
@@ -226,4 +230,39 @@ label {
 	padding: 10px;
 	background-color: #252626;
 	color: #ffffff;
+}
+
+/* EDIT PAGE */
+
+.editForm {
+	display: none;
+}
+
+i.fa-edit {
+	color: #bfbfb8;
+	font-size: 20px;
+}
+
+.editForm input {
+	max-width: 800px;
+	width: 80%;
+	margin-bottom: 10px;
+}
+
+#update {
+	max-width: 800px;
+	width: 83%;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #252626;
+	color: #ffffff;
+}
+
+.delete {
+	background: #7b0000;
+	color: #ffffff;
+	border: none;
+	max-width: 800px;
+	width: 83%;
+	padding: 10px;
 }

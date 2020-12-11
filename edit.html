@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS2 | CA | Add</title>
+    <title>JS2 | CA | Edit</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Sansita+Swashed:wght@300;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/629d80b15b.js" crossorigin="anonymous"></script>
@@ -16,8 +16,11 @@
         </nav>
     </header>
     <main class="container">
-        <h1>Add article</h1>
-        <form class="addForm">
+        <h1>Edit article</h1>
+
+        <div class="loading">Loading article...</div>
+
+        <form class="editForm">
             <div class="message-container"></div>
 
             <div>
@@ -32,7 +35,15 @@
                 <label for="author">Author</label>
                 <input id="author" />
             </div>
-            <button>Add</button>
+
+            <input id="id" type="hidden" />
+
+            <button id="update">Update</button>
+
+            <hr>
+            <div class="delete-container">
+
+            </div>
         </form>
     </main>
     <footer>
@@ -40,6 +51,6 @@
         <p>Noroff School of Technology</p>
         <p>December 2020</p>
     </footer>
-    <script src="js/add.js" type="module"></script>
+    <script src="js/edit.js" type="module"></script>
 </body>
 </html>
