@@ -2,10 +2,13 @@ import { baseUrl } from "./settings/api.js";
 import { renderArticles } from "./utils/renderArticles.js";
 import { searchArticles } from "./utils/searchArticles.js";
 // import { getExistingFavs } from "./utils/getFavourites.js";
-import { displayMessage } from "./utils/displayMessage.js";
+import { displayMessage } from "./components/displayMessage.js";
+import createMenu from "./components/createMenu.js";
 
 
 const articleUrl = baseUrl + "articles";
+
+createMenu();
 // const articleContainer = document.querySelector(".apiContainer");
 
 // const favourites = getExistingFavs();

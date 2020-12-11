@@ -1,5 +1,8 @@
 import { getExistingFavs } from "./utils/getFavourites.js";
 import clearButton from "./components/clearButton.js";
+import createMenu from "./components/createMenu.js";
+
+createMenu();
 
 export function renderFavourites() {
     const favourites = getExistingFavs();
