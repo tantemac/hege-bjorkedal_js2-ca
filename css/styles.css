@@ -201,3 +201,29 @@ label {
 .message.success {
 	border: 2px solid #ffffff;
 }
+
+/* ADD PAGE */
+
+.addForm input {
+	max-width: 800px;
+	width: 80%;
+	margin-bottom: 10px;
+}
+#summary {
+	max-width: 800px;
+	width: 80%;
+	max-height: 200px;
+	height: 200px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #252626;
+	font-size: 16px;
+}
+
+.addForm button {
+	max-width: 800px;
+	width: 83%;
+	padding: 10px;
+	background-color: #252626;
+	color: #ffffff;
+}
