@@ -11,7 +11,7 @@ export default function createMenu() {
 
     if (username) {
         
-        authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Article</a>
+        authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">Add article</a>
                     <span>Hi ${username}</span>`;
     }
 
