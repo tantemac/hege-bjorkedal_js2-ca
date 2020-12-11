@@ -3,7 +3,7 @@ import { saveToken, saveUser } from "./utils/loginStorage.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/createMenu.js";
 
-const form = document.querySelector("#contactForm");
+const form = document.querySelector("#loginForm");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");

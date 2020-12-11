@@ -68,11 +68,20 @@ nav a {
 	color: #bfbfb8;
 }
 
+#logout {
+	background-color: transparent;
+	border: none;
+	text-transform: none;
+	font-size: 16px;
+	text-decoration: underline;
+}
+
 h1 {
 	font-family: "Sansita Swashed", cursive;
 	font-weight: 600;
 	font-size: 40px;
 	text-shadow: 2px 2px 5px #252626;
+	margin-left: 20px;
 }
 
 input {
@@ -88,15 +97,24 @@ input:focus {
 	outline: none;
 }
 
+.search {
+	margin-left: 20px;
+}
+
+button {
+	font-family: "Rajdhani", sans-serif;
+}
+
 .container {
 	max-width: 1200px;
-	margin: 20px 40px;
 	flex: 1 0 auto;
+	margin-bottom: 40px;
 }
 
 .apiContainer {
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: 20px;
 }
 
 .article {
@@ -151,6 +169,10 @@ button:focus {
 	outline: none;
 }
 
+#clear {
+	margin-left: 20px;
+}
+
 footer {
 	display: flex;
 	flex-shrink: 0;
@@ -168,17 +190,28 @@ footer p {
 }
 
 /* LOG IN PAGE */
-form {
-	margin: 0 auto;
-	max-width: 400px;
+
+.margin {
+	margin-left: 40px;
 }
+
+.loginheader,
+.editheader,
+.addheader {
+	margin-left: 0px;
+}
+
+#loginForm {
+	max-width: 90%;
+	width: 600px;
+}
+
 label {
 	color: #ffffff;
 	display: block;
 }
 
 .forminput input {
-	width: 100%;
 	margin: 10px 0px;
 }
 
